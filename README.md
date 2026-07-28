@@ -17,19 +17,39 @@ repo groups the same six labs into four weeks instead of six.
 
 ## How this repo is organised
 
-Code is filed by **module**, mirroring the lesson slugs, exactly as in the
-six-week repo. `weeks/` is the four-week reading order on top of it: one folder
-per week, each README listing that week's sessions, labs and deadlines.
+**One folder per week, one folder per session.** Week 3 and Week 4 each merge
+two six-week sessions into one, so their folders share a session number: S5 is
+both `s05-agent-architecture` and `s05-cost-latency-reliability`, because that
+is genuinely one session in this cohort.
 
 ```
 common/llm.ts     the only vendor seam
-modules/          the code, one folder per lesson
-weeks/            the 4-week schedule, pointing into modules/
+weeks/
   week-1-foundations/
+    s01-why-demos-die/            runnable companions to the session
+    s02-code-model-boundary/
+    lab-workflow-router/          the lab: starter/ + solution/ + tests
   week-2-context-retrieval/
-  week-3-architecture-cost-security/   <- the compressed week
-  week-4-evals-capstone/
+    s03-context-engineering/
+    s04-context-pipeline/
+    lab-hybrid-rag/
+  week-3-architecture-cost-security/   <- the compressed week, 2 labs
+    s05-agent-architecture/
+    s05-cost-latency-reliability/
+    s06-securing-agents/
+    s06-budget-failure-map/
+    lab-budget-cache-fallback/
+    lab-guardrailed-agent/
+  week-4-evals-capstone/               <- evals + capstone, 2 labs
+    s07-trajectory-evals/
+    s07-harness-tracing/
+    s08-capstone-clinic/
+    s08-design-review/
+    lab-eval-harness/
+    lab-capstone-integration/
 ```
+
+Each week's README lists its sessions, its labs and its deadline.
 
 ## The four weeks
 
@@ -51,12 +71,12 @@ npm install
 cp .env.example .env    # add your OPENROUTER_API_KEY
 ```
 
-## Running a lesson companion or a lab
+## Running a session companion or a lab
 
 Both run the same way:
 
 ```bash
-npm run lab modules/01-workflows-and-agents/lab-workflow-router/starter/index.ts
+npm run lab weeks/week-1-foundations/lab-workflow-router/starter/index.ts
 ```
 
 ### The tests are the brief
@@ -77,7 +97,7 @@ limitation.
 
 ## What is scaffolded today
 
-**Module 1 is complete.** Both lesson companions are fully worked and runnable,
+**Week 1 is complete.** Both lesson companions are fully worked and runnable,
 and `lab-workflow-router` ships a starter, a worked solution and its full test
 suite. It is the reference for how all of this looks in code.
 
@@ -86,7 +106,7 @@ you build, and the corresponding course lesson carries the steps, the acceptance
 criteria and the code shape. Build them in your own codebase against that spec,
 or wait for the starter to land here.
 
-The lesson companions for modules 2 to 6 hold notes and small runnable snippets
+The session companions for weeks 2 to 4 hold notes and small runnable snippets
 rather than complete worked examples.
 
 The course copy says exactly this, and the two are kept in step. If that stops

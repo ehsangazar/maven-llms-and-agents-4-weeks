@@ -4,11 +4,11 @@
 Why an agent gets worse the longer it runs, and how to build a context pipeline
 that survives a long session.
 
-| # | Code | What it is |
-|---|------|-----------|
-| S3 | [`modules/02-context-and-retrieval/s03-context-engineering`](../../modules/02-context-and-retrieval/s03-context-engineering) | The window as a budget, lost-in-the-middle, retrieval that earns its place |
-| S4 | [`modules/02-context-and-retrieval/s04-context-pipeline`](../../modules/02-context-and-retrieval/s04-context-pipeline) | Assembling the pipeline: fetch, rank, compact, exclude |
-| Lab 2 | [`modules/02-context-and-retrieval/lab-hybrid-rag`](../../modules/02-context-and-retrieval/lab-hybrid-rag) | Dense + BM25, fusion, re-rank, token-budgeted assembly, refuse when irrelevant |
+| # | Folder | What it is |
+|---|--------|-----------|
+| S3 | [`s03-context-engineering`](s03-context-engineering) | The window as a budget, lost-in-the-middle, retrieval that earns its place |
+| S4 | [`s04-context-pipeline`](s04-context-pipeline) | Assembling the pipeline: fetch, rank, compact, exclude |
+| Lab 2 | [`lab-hybrid-rag`](lab-hybrid-rag) | Dense + BM25, fusion, re-rank, token-budgeted assembly, refuse when irrelevant |
 
 Project 1 (Context & Retrieval Design) is a written artifact, not code, but Lab 2
 is the fastest way to find out whether your design survives contact.
